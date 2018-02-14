@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.gis',
     'poi',
+    'mapwidgets',
 ]
 
 MIDDLEWARE = [
@@ -117,3 +118,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MAP_WIDGETS = {
+    'GooglePointFieldWidget': (
+        ('zoom', 5),
+        ('mapCenterLocationName', 'london'),
+        ('markerFitZoom', 8),
+    ),
+    'GOOGLE_MAP_API_KEY': env('GOOGLE_MAP_API_KEY')
+}
