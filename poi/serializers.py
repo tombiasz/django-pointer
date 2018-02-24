@@ -1,9 +1,9 @@
-from rest_framework import serializers
+from rest_framework_gis import serializers
 
 from .models import PointOfInterest
 
 
-class PointOfInterestSerializer(serializers.ModelSerializer):
+class PointOfInterestSerializer(serializers.GeoModelSerializer):
 
     class Meta:
         model = PointOfInterest
