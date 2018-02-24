@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'mapwidgets',
     'rest_framework',
+    'rest_framework_gis',
     'poi',
 ]
 
