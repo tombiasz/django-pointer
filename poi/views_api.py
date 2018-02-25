@@ -7,3 +7,8 @@ from .serializers import PointOfInterestSerializer
 class PointOfInterestListView(generics.ListAPIView):
     queryset = PointOfInterest.objects.all()
     serializer_class = PointOfInterestSerializer
+
+
+class PointOfInterestDetailsView(generics.RetrieveAPIView):
+    queryset = PointOfInterest.objects.all()
+    serializer_class = PointOfInterestSerializer
