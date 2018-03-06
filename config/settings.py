@@ -36,10 +36,12 @@ INSTALLED_APPS = [
     'mapwidgets',
     'rest_framework',
     'rest_framework_gis',
+    'corsheaders',
     'poi',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -129,3 +131,7 @@ MAP_WIDGETS = {
     ),
     'GOOGLE_MAP_API_KEY': env('GOOGLE_MAP_API_KEY')
 }
+
+CORS_ORIGIN_WHITELIST = (
+    env('CORS_POINTER_FRONTEND_URL'),
+)
